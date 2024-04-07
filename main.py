@@ -9,6 +9,12 @@ from fastapi import Query
 from fastapi import Path
 from bson import ObjectId
 
+import pkg_resources
+
+installed_packages = pkg_resources.working_set
+for package in installed_packages:
+    print(package)
+
 app = FastAPI()
 load_dotenv()
 
